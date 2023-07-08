@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="339.0" style="-fx-background-color: black; -fx-background-radius: 25; -fx-padding: 1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treebasedcalculator.CalculatorSystemController">
+   <children>
+      <HBox layoutX="9.0" layoutY="209.0" prefHeight="57.0" prefWidth="321.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="AC" />
+            <Button fx:id="btnOpenParentheses" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOpenClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="(" />
+            <Button fx:id="btnCloseParentheses" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCloseClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text=")" />
+            <Button fx:id="btnModulus" mnemonicParsing="false" onAction="#btnModulusClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 17;" text="\%" />
+         </children>
+      </HBox>
+      <HBox layoutX="9.0" layoutY="280.0" prefHeight="57.0" prefWidth="321.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btn7" mnemonicParsing="false" onAction="#btn7Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="7" />
+            <Button fx:id="btn8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn8Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="8" />
+            <Button fx:id="btn9" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn9Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="9" />
+            <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#btnDivideClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 17;" text="÷" />
+         </children>
+      </HBox>
+      <HBox layoutX="9.0" layoutY="349.0" prefHeight="57.0" prefWidth="321.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btn4" mnemonicParsing="false" onAction="#btn4Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="4" />
+            <Button fx:id="btn5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn5Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="5" />
+            <Button fx:id="btn6" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn6Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="6" />
+            <Button fx:id="brnMultiply" mnemonicParsing="false" onAction="#btnMultiplyClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 17;" text="x" />
+         </children>
+      </HBox>
+      <HBox layoutX="9.0" layoutY="417.0" prefHeight="57.0" prefWidth="321.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#btn1Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="1" />
+            <Button fx:id="btn2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn2Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="2" />
+            <Button fx:id="btn3" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn3Clicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="3" />
+            <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#btnMinusClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 17;" text="-" />
+         </children>
+      </HBox>
+      <HBox layoutX="9.0" layoutY="482.0" prefHeight="57.0" prefWidth="321.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="btn0" mnemonicParsing="false" onAction="#btn0Clicked" prefHeight="57.0" prefWidth="68.0" style="-fx-background-radius: 0 0 0 25; -fx-font-size: 17;" text="0" />
+            <Button fx:id="btnPoint" mnemonicParsing="false" onAction="#btnPointClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-font-size: 17;" text="." />
+            <Button fx:id="btnCalculate" layoutX="139.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCalculateClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-size: 17;" text="=" />
+            <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#btnPlusClicked" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 17; -fx-background-radius: 0 0 25 0;" text="+" />
+         </children>
+      </HBox>
+      <VBox layoutX="17.0" layoutY="28.0" prefHeight="167.0" prefWidth="314.0">
+         <children>
+            <TextField fx:id="textField2" style="-fx-background-color: black; -fx-text-inner-color: white;" />
+            <TextField fx:id="textField" prefHeight="167.0" prefWidth="314.0" promptText="0" style="-fx-background-color: black; -fx-font-size: 35; -fx-text-inner-color: white; -fx-alignment: center-right;" />
+         </children>
+      </VBox>
+      <Button fx:id="btnExit" layoutX="312.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="12.0" prefWidth="12.0" style="-fx-background-color: red; -fx-min-width: 1; -fx-min-height: 1;" />
+   </children>
+</AnchorPane>
